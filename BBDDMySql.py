@@ -24,6 +24,11 @@ db.generate_mapping(create_tables=True)
 #uso with aunque podria usar @db_session
 with db_session:
     p1 = Person(name='John', age=20)
+    p2 = Person(name='Mike', age=18)
+    #para guardarlo
+    commit()
 
 with db_session:
     c1 = Coche(name='Opel', puertas=4)
+    c2 = Coche(name='BMW', puertas=2)
+    commit()
