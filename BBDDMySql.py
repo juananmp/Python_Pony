@@ -16,5 +16,6 @@ sql_debug(True)
 db.generate_mapping(create_tables=True)
 
 #Mete a john en la tabla person de la bbdd PruebaMysql
+#uso with aunque podria usar @db_session
 with db_session:
     p1 = Person(name='John', age=20)
