@@ -10,5 +10,11 @@ class Person(db.Entity):
     name = Required(str)
     age = Required(int)
 
+#Para mostrar por consola
 sql_debug(True)
+#Crea la tabla sino esta creada
 db.generate_mapping(create_tables=True)
+
+#Mete a john en la tabla person de la bbdd PruebaMysql
+with db_session:
+    p1 = Person(name='John', age=20)
